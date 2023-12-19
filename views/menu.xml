@@ -1,0 +1,12 @@
+<?xml version ="1.0" encoding="utf-8"?>
+
+<odoo>
+    <menuitem id="resort_root"
+              name="Resort"
+              sequence="0"/>
+
+    <menuitem id="resort_form"
+              name="Tourist Form"
+              parent="resort_root"
+              sequence="0"/>
+</odoo>

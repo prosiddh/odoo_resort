@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+resort.access_tourist_tourist,access_tourist_tourist,resort.model_tourist_tourist,base.group_user,1,1,1,1
+resort.access_add_wizard,access_add_wizard,resort.model_add_wizard,base.group_user,1,1,1,1
+resort.access_address,access_address,resort.model_address,base.group_user,1,1,1,1

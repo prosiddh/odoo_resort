@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_tourist_form" model="ir.ui.view">
+        <field name="name">tourist.tourist.form</field>
+        <field name="model">tourist.tourist</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Add Info" class="oe_highlight" name="button_add_info" type="object"/>
+                </header>
+
+                <sheet>
+                    <group>
+                        <field name="tourist_name"/>
+                        <field name="tourist_age"/>
+                        <field name="notes"/>
+                        <field name="image"/>
+                        <field name="capital_name"/>
+                    </group>
+                        <button string="Save Info demo" class="oe_highlight" name="button_save_info" type="object"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tourist_tree" model="ir.ui.view">
+        <field name="name">tourist.tourist.tree</field>
+        <field name="model">tourist.tourist</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="tourist_name"/>
+                <field name="tourist_age"/>
+                <field name="notes"/>
+                <field name="image"/>
+                <field name="capital_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_tourist" model="ir.actions.act_window">
+        <field name="name">Tourist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tourist.tourist</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="resort_tourist"
+              name="Input Data"
+              parent="resort_form"
+              action="action_tourist"
+              sequence="0"/>
+
+    <menuitem id="add_form"
+              name="Add Form"
+              action="action_tourist"
+              parent="resort_form"
+              sequence="0"/>
+</odoo>
